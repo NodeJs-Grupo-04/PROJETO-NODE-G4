@@ -1,0 +1,48 @@
+{{>header}}
+
+<section class='container' style="height: 1000px">
+  <div class="d-grid gap-2 d-flex justify-content-end mb-4">
+    <a href="/"><i class="bi bi-box-arrow-right fs-3 text-success"></i></a>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover" id='tabela'>
+      <div class="mb-4 text-center mb-2">
+        <label class="fs-3 fw-bold" style="font-size: clamp(0.5rem, 2vw, 1rem)">Pesquise pelo Nome ou pela Especialidade do Médico</label>
+        <div class="my-3" style="font-size: clamp(0.7rem, 2vw, 1rem)">
+          <input type="text" id="pesquisaMedico" placeholder="Procure pelo nome do(a) Médico(a)" style="width: 30%;"
+            class="text-center" onkeyup="pesquisarMedico()" >
+          {{!-- <button onclick="pesquisarMedico()" class="btn-success">Pesquisar</button> --}}
+
+          <input type="text" id="pesquisarEspecial" placeholder="Procure pela Especialidade Médica" class="ms-4 text-center"
+            style="width: 30%;" onkeyup="pesquisarEspecial()" >
+
+          {{!-- <button onclick="pesquisarEspecial()" class="btn-success">Pesquisar</button> --}}
+        </div>
+      </div>
+      <thead style="font-size: clamp(1rem, 2vw, 1.2rem)">
+        <th>Nome</th>
+        <th>CRM</th>
+        <th>Especialidade</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+      </thead>
+
+      <tbody id='tbody' style="font-size: clamp(0.7rem, 2vw, 1rem)">
+        {{#each resultado}}
+        <tr>
+          <td>{{nome}}</td>
+          <td>{{crm}}</td>
+          <td>{{especialidade}}</td>
+          <td>{{telefone}}</td>
+          <td>{{email}}</td>
+          <td style="font-size: clamp(0.7rem, 2vw, 1rem)">
+            <a href='/editarMedico/{{_id}}' class='btn btn-sm btn-success'>Editar</a>
+            <a id="btn1" href='deletarMedico/{{_id}}' class='btn btn-sm btn-danger'>Excluir</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <script src="../public/js/script.js"></script>
+</section>

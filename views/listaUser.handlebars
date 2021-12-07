@@ -1,0 +1,43 @@
+{{>carrossel}}
+
+<section class='container' style="height: 95vh">
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+   <a href="/"><i class="bi bi-box-arrow-right fs-3 text-success"></i></a>
+</div>
+  <div class="table-responsive">
+    <table class="table table-hover" id='tabela'>
+      <div class="mb-4 text-center mb-2">
+        <labe class="fs-3 fw-bold">Pesquise pelo Nome ou pela Especialidade do Médico</labe>
+        <div class="my-3">
+
+          <input type="text" id="pesquisaMedico" placeholder="Procure pelo nome do(a) Médico(a)"  style="width: 300px;" class="text-center" onkeyup="pesquisarMedico()" >
+          {{!-- <button onclick="pesquisarMedico()" class="btn-success">Pesquisar</button> --}}
+
+          <input type="text" id="pesquisarEspecial" placeholder="Procure pela Especialidade Médica" class="ms-4 text-center" style="width: 300px;" onkeyup="pesquisarEspecial()" >
+
+          {{!-- <button onclick="pesquisarEspecial()" class="btn-success">Pesquisar</button> --}}
+        </div>
+      </div>
+      <thead>
+        <th>Nome</th>
+        <th>CRM</th>
+        <th>Especialidade</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+      </thead>
+
+      <tbody id='tbody'>
+        {{#each resultado}}
+        <tr>
+          <td>{{nome}}</td>
+          <td>{{crm}}</td>
+          <td>{{especialidade}}</td>
+          <td>{{telefone}}</td>
+          <td>{{email}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <script src="../public/js/script.js"></script>
+</section>

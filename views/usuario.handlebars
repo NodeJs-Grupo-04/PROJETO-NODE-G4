@@ -1,0 +1,47 @@
+{{>header}}
+<div class="d-grid gap-2 d-flex justify-content-end me-4">
+    <a href="/"><i class="bi bi-box-arrow-right fs-3 text-success"></i></a>
+  </div>
+
+<div class="container">
+    <section class="row">
+        <div class="col-9 col-lg-5 mb-5 rounded-3 m-auto">
+            <form action="/addUsuario" method="post" class="text-center text-success border rounded-3 border-3 border-success" style="font-size: clamp(0.7rem, 2vw, 1rem)">
+                <div class="my-3" style="font-size: clamp(0.7rem, 2vw, 1rem)">
+                    <h2 class="text-center">Cadastro de Usuários</h2>
+                </div>
+                <div>
+                    <label class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1.2rem);">Perfil de Acesso:
+                        <input type="radio" name="escolhaPerfil" id="visual" value="Usuário"> Usuário
+                        <input type="radio" name="escolhaPerfil" id="adm" value="Administrativo"> Administrativo
+                    </label>
+                </div>
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left; font-weigth: bold">Nome:
+                        <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Digite seu nome" style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 73%" required></input>
+                    </label>
+                </div>
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left; font-weigth: bold">Função:
+                        <input type="text" id="funcaoUsuario" name="funcaoUsuario" placeholder="Digite a função do Usuário" style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 71.5%" required></input>
+                    </label>
+                </div>
+
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left; font-weigth: bold">Login:
+                        <input type="text" id="loginUsuario" name="loginUsuario" style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 74%" required></input>
+                    </label>
+                </div>
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left; font-weigth: bold">Senha:
+                        <input type="password" id="senhaUsuario" name="senhaUsuario" style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 73.5%" required></input>
+                    </label>
+                </div>
+                <div class="my-3 fw-bold">
+                    <button id="btn1" type="submit" class='btn btn-sm btn-success' style="width: 20%; font-size: clamp(0.7rem, 2vw, 1rem)">Salvar</button>
+                    <button id="btn2" type="reset" class='btn btn-sm btn-success me-2' style="width: 20%; font-size: clamp(0.7rem, 2vw, 1rem)">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

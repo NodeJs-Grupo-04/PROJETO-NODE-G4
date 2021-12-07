@@ -1,0 +1,39 @@
+{{>header}}
+<section class='container'>
+  <div class="d-grid gap-2 d-flex justify-content-end">
+    <a href="/"><i class="bi bi-box-arrow-right fs-3 text-success"></i></a>
+  </div>
+    <div class="table-responsive">
+      <table class="table" id='tabela'>
+        <thead style="font-size: clamp(1rem, 2vw, 1.5rem)">
+          <th>Perfil de Acesso</th>
+          <th>Nome</th>
+          <th>Função</th>
+          <th>Login</th>
+          <th>Ações</th>
+        </thead>
+
+        <tbody id='tbody'>
+          {{#each resultadoUsuario}}
+            <tr>
+              <td>{{perfil}}</td>
+              <td>{{nome}}</td>
+              <td>{{funcao}}</td>
+              <td>{{login}}</td>
+              <td>
+                
+                <a
+                  href='/editarUsuario/{{_id}}'
+                  class='btn btn-sm btn-success'
+                >Editar</a>
+                <a
+                href='deletarUsuario/{{_id}}'
+                  class='btn btn-sm btn-danger'
+                >Excluir</a>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  </div>
+</section>

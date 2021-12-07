@@ -1,0 +1,27 @@
+<section class='conteudo'>
+  <table border='1' id='tabela'>
+      <div><input type="search" id="pesquisaMedico" placeholder="Digite o nome do Médico" onkeyup="pesquisarMedico()">
+      <div><input type="search" id="pesquisarEspecial" placeholder="Digite a Especialidade" onkeyup="pesquisarEspecial()">
+</div>
+    <thead style="font-size: clamp(0.5rem, 2vw, 1rem)">
+      <th>Nome</th>
+      <th>CRM</th>
+      <th>Especialidade</th>
+      <th>Telefone</th>
+      <th>E-mail</th>
+    </thead>
+
+    <tbody id='tbody'>
+      {{#each resultado}}
+        <tr>
+          <td>{{nome}}</td>
+          <td>{{crm}}</td>
+          <td>{{especialidade}}</td>
+          <td>{{telefone}}</td>
+          <td>{{email}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+   <script src="../public/js/script.js"></script>
+</section>

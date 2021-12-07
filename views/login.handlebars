@@ -1,0 +1,55 @@
+{{>carrossel}}
+<section>
+    {{!-- Abertura do if para condicionar o aparecimento da mensagem às condições estabelecidas na rota de login --}}
+    {{#if message}}
+    <div style="text-align: center; font-size: clamp(0.7rem, 2vw, 1rem)" class="alert alert-danger">
+        {{!-- A separação entre intro/message é apenas para conseguirmos editar de maneira diferentes os textos --}}
+        <strong>{{message.intro}}</strong> {{message.message}}
+        {{!-- Botão para fechar o alerta --}}
+        <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close" onClick="selector()">
+        </button>
+    </div>
+    {{/if}}
+
+    <div class="container mb-5">
+        <section class="row text-center">
+            <div class="col-9 col-md-4 bg-success mt-5 mb-5 rounded-3 m-auto">
+                <form action="/verificaLogin" method="post">
+                    <div class="text-white fs-5">
+                        <div class="mt-2">
+                            <h2 class="text-center" style="font-size: clamp(1.2rem, 2vw, 2rem);">Login</h2>
+                        </div>
+                        <div class="my-3">
+                            <label for="exampleInputEmail1" class="form-label"
+                                style="font-size: clamp(1rem, 2vw, 1.3rem); font-weigth: bold">Perfil de Acesso:</label>
+                            <div class="text-center" style="font-size: clamp(1rem, 2vw, 1.2rem)">
+                                <input type="radio" name="escolhaLogin" id="visual" value="Usuário" required> Usuário
+                                <input type="radio" name="escolhaLogin" id="adm" value="Administrativo" class="ms-4"
+                                    required> Administrativo
+                            </div>
+                        </div>
+                        <div for="usuario">
+                            <label class="form-label" style="font-size: clamp(1rem, 2vw, 1.2rem)">Usuário:</label>
+                            <input type="text" name="usuario" placeholder="Informe seu nome de Usuário"
+                                class="form-control w-75 text-center m-auto" id="usuario" aria-describedby="emailHelp"
+                                style="font-size: clamp(0.7rem, 2vw, 1rem)" required></input>
+                        </div>
+                        <div for="senha">
+                            <label class="form-label mt-4" style="font-size: clamp(1rem, 2vw, 1.2rem)">Senha:</label>
+                            <input type="password" name="senha" placeholder="Informe sua Senha"
+                                class="form-control w-75 text-center m-auto" id="senha" aria-describedby="emailHelp"
+                                style="font-size: clamp(0.7rem, 2vw, 1rem)" required></input>
+                        </div>
+                        <div class="text-center my-4">
+                            <button id="btn3" type="submit" class="btn btn-light text-success mt-2 mb-3"
+                                style="width: 30%; font-size: clamp(0.8rem, 2vw, 1rem)">Entrar</button>
+
+                            <button id="btn2" type="reset" class="btn btn-light text-success mt-2 mb-3 ms-2"
+                                style="width: 30%; font-size: clamp(0.8rem, 2vw, 1rem)">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</section>

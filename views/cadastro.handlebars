@@ -1,0 +1,61 @@
+{{>header}}
+<section style="height: 74vh;">
+<div class="d-grid gap-2 d-flex justify-content-end me-4">
+    <a href="/"><i class="bi bi-box-arrow-right fs-3 text-success"></i></a>
+</div>
+
+<div class="container" >
+    <section class="row">
+        <div class="col-9 col-lg-5 mb-5 rounded-3 m-auto">
+            <form action="/addMedicos" method="post" class="text-center text-success border rounded-3 border-3 border-success">
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem)">
+                    <h2 class="text-center">Cadastro de Médicos</h2>
+                </div>
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left;">Nome:
+                        <input type="text" id="nome" name="nome" placeholder="Digite o nome completo"
+                            style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 71.7%" required></input>
+                    </label>
+                </div>
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left;">CRM:
+                        <input type="text" id="crm" name="crm" placeholder="Digite o CRM"
+                            style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 74%" required></input>
+                    </label>
+                </div>
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left;">Especialidade:
+                        <select name="especialidade2" style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 58%; font-size: clamp(0.6rem, 2vw, 1rem); height:30px" required>
+                            <option value="">Selecione uma Opção</option>
+                            <option name="especialidade" value="angiologia">Angiologia</option>
+                            <option name="especialidade" value="cardiologia">Cardiologia</option>
+                            <option name="especialidade" value="dermatologia">Dermatologia</option>
+                            <option name="especialidade" value="endocrinologia">Endocrinologia</option>
+                            <option name="especialidade" value="ginecologia">Ginecologia</option>
+                            <option name="especialidade" value="obstetricia">Obstetricia</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left;">Telefone:
+                        <input type="text" id="telefone" name="telefone" placeholder="Digite o número com 11 digitos"
+                            style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 68%" required></input>
+                    </label>
+                </div>
+
+                <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 12%">
+                    <label style="display:block; text-align: left;">E-mail:
+                        <input type="email" id="email" name="email" placeholder="Digite o E-mail"
+                            style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 72%" required></input>
+                    </label>
+                </div>
+                <div class="mb-3 fw-bold">
+                    <button id="btn1" type="submit" class='btn btn-sm btn-success' style="width: 20%; font-size: clamp(0.7rem, 2vw, 1rem)">Salvar</button>
+                    <button id="btn2" type="reset" class='btn btn-sm btn-success ms-2' style="width: 20%; font-size: clamp(0.7rem, 2vw, 1rem)">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </section>    
+    <script src="../public/js/script.js"></script>
+</div>
+</section>

@@ -1,0 +1,96 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <img id="logo" src="../img/logo.png" style="width: 200px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav"
+                style="font-size: clamp(1rem, 2vw, 2rem)">
+
+                <ul class="navbar-nav mb-2 mb-lg-0 fs-4">
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="/lista">| Lista de Médicos |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="/cadastro">Cadastro de Médicos |</a>
+                    </li>
+                    {{!-- <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="/listaUsuario">Lista de Usuário |</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" style="color:white" href="/usuario">Cadastro de Usuário</a>
+                    </li> --}}
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<section style="height: 74vh;">
+    <div class="d-grid gap-2 d-flex justify-content-end me-4">
+        <a href="/"><i class="bi bi-box-arrow-right fs-3 text-success"></i></a>
+    </div>
+    <div class="container">
+        <section class="row">
+            <div class="col-9 col-lg-5 mb-5 rounded-3 m-auto">
+                <form action="/editarMedico/{{id}}" method="post"
+                    class="text-center text-success border rounded-3 border-3 border-success">
+                    <span>Editar Cadastro de Médicos</span>
+                   
+                    <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem)">
+                        <label style="display:block; text-align: left; padding-left:9%">Nome:
+                        <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" style="display: inline-block; width:70%" value="{{resultado.nome}}" required></input></label>
+                    </div>
+
+                    <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 9%">
+                        <label style="display: block; text-align: left;">CRM:
+                        <input type="text" id="crm" name="crm" placeholder="Digite o CRM" style=" display: inline-block; width: 73%" value='{{resultado.crm}}'required></input></label>
+                        <input type="hidden" id="especAntes" name="especAntes"
+                            value='{{resultado.especialidade}}'></input>
+                    </div>
+
+                    <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 9%">
+                        <label style="display:block; text-align: left;">Especialidade:
+                        <select name='especialidade' style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 56%; font-size: clamp(0.6rem, 2vw, 1rem); height:30px" value='{{resultado.especialidade}}' required>
+                            <option value="">Selecione uma Opção</option>
+                            <option name="especialidade" value="angiologia">Angiologia</option>
+                            <option name="especialidade" value="cardiologia">Cardiologia</option>
+                            <option name="especialidade" value="dermatologia">Dermatologia</option>
+                            <option name="especialidade" value="endocrinologia">Endocrinologia</option>
+                            <option name="especialidade" value="ginecologia">Ginecologia</option>
+                            <option name="especialidade" value="obstetricia">Obstetricia</option>
+                        </select>
+                        </label>
+                    </div>
+
+                    <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 9%">
+                        <label style="display:block; text-align: left;">Telefone:
+                        <input type="text" id="telefone" name="telefone" style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 65%" value='{{resultado.telefone}}'
+                            placeholder="Digite o número do telefone com 11 digitos" required></input></label>
+                    </div>
+
+                    <div class="my-3 fw-bold" style="font-size: clamp(0.7rem, 2vw, 1rem); margin-left: 9%">
+                        <label style="display:block; text-align: left;">E-mail:
+                        <input type="email" id="email" name="email" style="margin-left: 5px; padding-left: 5px; display: inline-block; width: 70%" value="{{resultado.email}}"
+                            placeholder="Digite o E-mail" required></input></label>
+                    </div>
+
+<div class="mb-3 fw-bold">
+                    <input type="hidden" name="id" value="{{resultado._id}}">
+                    <button id="btn1" type="submit" class='btn btn-sm btn-success'
+                            style="width: 20%; font-size: clamp(0.7rem, 2vw, 1rem)"
+>Salvar</button>
+                    <button id="btn2" type="reset" class='btn btn-sm btn-success ms-2'
+                            style="width: 20%; font-size: clamp(0.7rem, 2vw, 1rem)"
+>Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="../public/js/script.js"></script>
+</section>
