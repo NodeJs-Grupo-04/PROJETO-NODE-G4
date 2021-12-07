@@ -19,6 +19,15 @@ Requisitos:
 
 - Usar Banco de Dados MongoDB;
 
+### Demonstração da página inicial:
+
+![Demosntração da página index](https://github.com/NodeJs-Grupo-04/PROJETO-NODE---G4/blob/main/assets/print-Readme.png)
+
+### Demonstração da página do perfil Administrativo:
+
+![Demosntração do Perfil Administrativo](https://github.com/NodeJs-Grupo-04/PROJETO-NODE---G4/blob/main/assets/print-Readme2.png)
+
+
 # Grupo composto por:
 -Bruna Hirano Imbriani
 
