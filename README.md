@@ -15,11 +15,11 @@ USER - Consegue listar os médicos por especialidade e realizar pesquisa por nom
 
 Requisitos:
 
-Estilizar;
-Usar Banco de Dados MongoDB;
+-Estilizar;
+-Usar Banco de Dados MongoDB;
 
 # Grupo composto por:
-Bruna Hirano Imbriani
-Carolina Rodrigues
-Carolina Korndorfer
-Livia Pereira
+-Bruna Hirano Imbriani
+-Carolina Rodrigues
+-Carolina Korndorfer
+-Livia Pereira
